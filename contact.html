@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me - Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Portfolio.</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <!-- Heading -->
+      <div class="section-heading">
+        <h2>Contact Us</h2>
+        <p>
+          Let’s connect I’m always open to discussing new projects, creative
+          ideas, or opportunities to collaborate.
+        </p>
+      </div>
+
+      <!-- Content -->
+      <div class="contact-content">
+        <!-- Left: Info -->
+        <div class="contact-info">
+          <h3>LinkedIn</h3>
+          <p>
+            <i class="fab fa-linkedin"></i>
+            <a
+              href="https://www.linkedin.com/in/alishba-nasir-6399a0292"
+              target="_blank"
+              >linkedin.com/in/alishba-nasir-6399a0292</a
+            >
+          </p>
+
+          <h3>GitHub</h3>
+          <p>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/alishba2347" target="_blank"
+              >github.com/alishba2347</a
+            >
+          </p>
+
+          <h3>Gmail</h3>
+          <p>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:nasiralishba525@gmail.com">nasiralishba525@gmail.com</a>
+          </p>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form">
+          <h3>Send Message</h3>
+          <form>
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required />
+
+            <label>Email</label>
+            <input type="email" placeholder="Enter your email" required />
+
+            <label>Type your Message...</label>
+            <textarea
+              placeholder="Write your message here..."
+              required
+            ></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script>
+  document.querySelector("form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop default page reload
+
+    // Optionally, you can collect form data like this:
+    const name = document.querySelector('input[type="text"]').value;
+    const email = document.querySelector('input[type="email"]').value;
+    const message = document.querySelector('textarea').value;
+
+    // Show success message
+    alert("Thank you, " + name + "! Your message has been sent.");
+
+    // Optionally, clear form
+    this.reset();
+  });
+</script>
+</html>

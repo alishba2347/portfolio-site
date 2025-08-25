@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Alishba's Portfolio</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active-link">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="about-container">
+
+          <!-- Left Side (image) -->
+          <div class="about-image">
+            <img src="images/developer.png" alt="">
+          </div>
+
+          <!-- Right Side content -->
+          <div class="about-content">
+            <h2>About <span>Me</span></h2>
+            <h3>Aspiring Web Developer</h3>
+            <p>
+              Hi, I'm  Alishba - an aspiring web developer with a passion for creating clean, responsive, and user-friendly websites. I have a strong foundation in <strong>HTML, CSS, and Javascript</strong>, and I am constantly learning and practicing modern web development skills.
+            </p>
+            <a href="#detailed-about" class="btn">Read More</a>
+          </div>
+       </div>
+        </section>
+
+        <!-- Detailed About Section (Scroll target) -->
+         <section id="detailed-about" class="detailed-about">
+          <h2>More About Me</h2>
+        </p>
+        My current focus is on building small projects to strengthen my fundamentals while preparing to dive deeper into advanced topics such as <strong>React, APIs, and full-stack development</strong>.I enjoy solving problems, expetrimenting with layouts, and bringing creative ideas to life on the web.
+        </p>
+     <p>
+       I'm a firm believer in continuous learning, and I often explore new tools and technologies through online courses, coding challenges, and open-source contributions. Staying updated with industry trends is something I actively pursue.
+  </p>
+   <p>
+    I’m also developing soft skills like communication, collaboration, and time management to become a well-rounded developer. Whether it's working independently or as part of a team, I value clean code, thoughtful design, and user-first experiences.
+  </p>
+        <p>
+          My ultimate goal is to grow into a professional front-end developer, contribute to impactful projects, and build user-friendly web applications.
+        </p>
+        </section>
+        
+          </main>
+          <script>
+            // Show/hide detailed about section on "Read More" button click
+            document.addEventListener("DOMContentLoaded", function() {
+        const btn = document.querySelector(".about-content .btn");
+        const detailedSection = document.getElementById("detailed-about");
+        detailedSection.style.display = "none";
+        btn.addEventListener("click", function(e) {
+          e.preventDefault();
+          detailedSection.style.display = "block";
+          detailedSection.scrollIntoView({ behavior: "smooth" });
+        });
+            });
+          </script>
+        </body>
+
+</html>

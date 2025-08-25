@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Portfolio.</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="firstSection">
+        <div class="leftSection">
+          <div>Hi, My name is <span class="purple">Alishba</span></div>
+          <div>and I am a passionate</div>
+          <span id="element"></span>
+          <div class="buttons">
+            <button class="btn" id="linkedinBtn">Visit Linkedin</button>
+            <button class="btn" id="githubBtn">Visit Github</button>
+          </div>
+        </div>
+        <div class="rightSection">
+          <img src="images/femaledev.png" alt="" />
+        </div>
+      </section>
+<hr>
+
+      <section class="secondSection" id="skills">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Skills</h1>
+        <div class="box">
+
+          <!-- HTML -->
+          <div class="vertical">
+            <img class="image-top" src="images/html.png" alt="">
+            <div class="vertical-title">
+              HTML (2023)
+            </div>
+            <div class="vertical-desc">
+              I began my web development journey in 2023 with HTML. I learned how to structure web pages using semantic tags like header, nav, section, and footer. I also became comfortable with forms, tables, lists, and accessibility best practices. Since then, I’ve created multiple static pages and simple templates.
+            </div>
+          </div>
+
+          <!-- CSS -->
+            <div class="vertical">
+            <img class="image-top" src="images/css.png" alt="">
+            <div class="vertical-title">
+              CSS (2023)
+            </div>
+            <div class="vertical-desc">
+             After HTML, I focused on CSS to style my web pages. I’ve worked with Flexbox, CSS Grid, pseudo-classes, transitions, and custom fonts. I understand responsive design concepts using media queries and have recreated several landing pages with pixel-perfect accuracy.
+            </div>
+          </div>
+
+          <!-- Bootstrap -->
+          <div class="vertical">
+            <img class="image-top" src="images/bootstrap.png" alt="">
+            <div class="vertical-title">
+            Bootstrap (2023)
+            </div>
+            <div class="vertical-desc">
+              To speed up design workflows, I started using Bootstrap 5. I use its grid system, components like navbars and modals, and utility classes to build responsive layouts. I’ve converted several static HTML/CSS projects into responsive ones using Bootstrap with a clean and professional UI.
+            </div>
+          </div>
+
+          <!-- JavaScript-->
+             <div class="vertical">
+            <img class="image-top" src="images/js.png" alt="">
+            <div class="vertical-title">
+              JavaScript (2024)
+            </div>
+            <div class="vertical-desc">
+             In 2024, I started learning JavaScript to add interactivity to my projects. I’ve covered variables, functions, objects, arrays, DOM manipulation, and event handling. I’ve built small projects like a calculator, to-do list, and form validators. I’m also familiar with ES6 features like arrow functions and template literals.
+        </div>
+            </div>
+
+            <!-- Git & GitHub -->
+            <div class="vertical">
+              <img class="image-top" src="images/git.png" alt="">
+              <div class="vertical-title">
+                Git & GitHub (2024)
+              </div>
+              <div class="vertical-desc">
+                I started using Git and GitHub in 2024 to manage my projects more professionally. I regularly use Git to track code changes, create branches, and handle version control locally. On GitHub, I host all my projects, write proper README files, manage commit history, and collaborate on repositories. I’ve also used GitHub Pages to deploy static websites.
+              </div>
+            </div>
+
+            <!-- React -->
+            <div class="vertical">
+                <img class="image-top" src="images/react.png" alt="">
+               <div class="vertical-title">
+              React (2025 - Learning)
+            </div>
+            <div class="vertical-desc">
+               Currently, I am exploring React. I understand components, JSX, props, and state. I'm working on small applications to understand the component lifecycle, hooks, and routing. My goal is to build dynamic SPAs and integrate APIs using React in the near future.
+            </div>
+           </div>
+
+
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer">
+        <div class="footer-first">
+          <h3>Alishba's Developer Portfolio</h3>
+        </div>
+        <div class="footer-second">
+          <ul>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="index.html#skills">Skills</a></li>
+           <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-third">
+            <ul>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="index.html#skills">Skills</a></li>
+           <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-fourth">
+            <ul>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="about.html">About</a></li>
+           <li><a href="index.html#skills">Skills</a></li>
+           <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-rights">
+       Copyright &#169; alishbasportfolio.com | All rights reserved
+
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: ["Web Developer", "Web Designer"],
+        typeSpeed: 50,
+      });
+
+      // Linkedin button click
+      document.getElementById('linkedinBtn').textContent = "Visit Linkedin";
+      document.getElementById('linkedinBtn').onclick = function() {
+      window.open('https://www.linkedin.com/in/alishba-nasir-6399a0292/', '_blank');
+    };
+
+    // Github button click
+    document.getElementById('githubBtn').onclick = function() {
+      window.open('https://github.com/alishba2347', '_blank');
+    };
+    </script>
+  </body>
+</html>

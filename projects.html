@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+      <nav>
+        <div class="left">Portfolio.</div>
+        <div class="right">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#skills">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <section id="projects">
+    <h2 class="section-title">Latest <span>Projects</span></h2>
+
+    <input type="text" id="searchInput" placeholder="Search Projects...">
+
+    <div class="projects-container" id="projectList">
+
+      <div class="project-card" data-title="Portfolio Website">
+        <img src="images/project1.jpg" alt="Portfolio Website">
+        <div class="project-info">
+          <h3>Portfolio Website</h3>
+          <p>A responsive website built using HTML, CSS, and JavaScript.</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-title="To-Do App">
+        <img src="images/project 2.png" alt="To-Do App">
+        <div class="project-info">
+          <h3>To-Do App</h3>
+          <p>Manage daily tasks with add, edit, and delete features.</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-title="Weather App">
+        <img src="images/project 3.jpg" alt="Weather App">
+        <div class="project-info">
+          <h3>Weather App</h3>
+          <p>Real-time weather forecast using OpenWeather API.</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-title="Calculator">
+        <img src="images/project 4.jpeg" alt="Calculator">
+        <div class="project-info">
+          <h3>Calculator</h3>
+          <p>Simple calculator for arithmetic operations.</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-title="Quiz App">
+        <img src="images/project 5.jpg" alt="Quiz App">
+        <div class="project-info">
+          <h3>Quiz App</h3>
+          <p>MCQ quiz app with timer and score tracking.</p>
+        </div>
+      </div>
+
+      <div class="project-card" data-title="Landing Page">
+        <img src="images/project 6.jpeg" alt="Landing Page">
+        <div class="project-info">
+          <h3>Landing Page</h3>
+          <p>Modern and clean landing page UI design.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="projectModal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <img id="modalImg" src="" alt="Project Preview">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <a id="modalLink" href="#" target="_blank">View Live</a>
+      </div>
+    </div>
+  </section>
+</body>
+<script>
+// Modal functionality
+const modal = document.getElementById("projectModal");
+const modalImg = document.getElementById("modalImg");
+const modalTitle = document.getElementById("modalTitle");
+const modalDesc = document.getElementById("modalDesc");
+const modalLink = document.getElementById("modalLink");
+const closeBtn = document.querySelector(".close");
+
+document.querySelectorAll(".project-card").forEach(card => {
+  card.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = card.querySelector("img").src;
+    modalTitle.textContent = card.querySelector("h3").textContent;
+    modalDesc.textContent = card.querySelector("p").textContent;
+  });
+});
+
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+// Search functionality
+document.getElementById("searchInput").addEventListener("input", function () {
+  const query = this.value.toLowerCase();
+  const projects = document.querySelectorAll(".project-card");
+
+  projects.forEach(project => {
+    const title = project.getAttribute("data-title").toLowerCase();
+    if (title.includes(query)) {
+      project.style.display = "block";
+    } else {
+      project.style.display = "none";
+    }
+  });
+});
+</script>
